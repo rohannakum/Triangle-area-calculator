@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Area</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        main {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .mainDiv {
+            text-align: center;
+        }
+
+        h1 {
+            color: black;
+            font-size: 50px;
+            font-weight: bolder;
+            margin: 20px 20px;
+        }
+
+        label {
+            font-size: 25px;
+            margin: 0px 15px;
+        }
+
+        input {
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
+            border-bottom: 4px solid black;
+            font-size: 25px;
+            margin: 15px;
+        }
+
+        button {
+            font-size: 30px;
+            color: white;
+            background: rgba(49, 49, 148, 0.650);
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 170px;
+            height: 50px;
+            margin: 30px;
+        }
+
+        button:hover {
+            background: rgba(49, 49, 148, 0.750);
+        }
+
+        p {
+            font-size: 25px;
+            margin: 20px 10px;
+        }
+
+        .pictureDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 90vw;
+            height: auto;
+        }
+
+        .htmlPictureDiv {
+            margin: 20px;
+            height: 50%;
+        }
+
+        .jsPictureDiv {
+            margin: 20px;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="mainDiv">
+            <h1>Triangle Area Calculator</h1>
+
+
+            <div class="input1">
+                <label for="variable1">Enter base of the triangle :</label>
+                <input type="number" name="var1" id="variable1">
+            </div>
+            <div class="input2">
+                <label for="variable2">Enter height of the triangle :</label>
+                <input type="number" name="var2" id="variable2">
+            </div>
+
+            <Button onclick="calculateFunctioin()">Calculate</Button>
+
+            <div id="beforeText">
+                <p id="p1"></p>
+                <p id="p2"></p>
+                <p id="p3"></p>
+
+            </div>
+
+
+        </div>
+        <div class="pictureDiv">
+            <div class="htmlPictureDiv">
+                <img src="./html.png" alt="P1">
+            </div>
+            <div class="jsPictureDiv">
+                <img src="./js.png" alt="P1">
+
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+    <!-- JavaScript  -->
+    <script>
+        "use strict";
+        function calculateFunctioin() {
+
+            let a = document.getElementById("variable1").value;
+            let b = document.getElementById("variable2").value;
+            let c = (a * b) / 2;
+
+            document.getElementById("p1").innerHTML = `Base Value : ${a}`;
+            document.getElementById("p2").innerHTML = `Height Value : ${b}`;
+            document.getElementById("p3").innerHTML = `Area Value : ${c}`;
+
+
+        }
+    </script>
+
+</body>
+
+</html>
